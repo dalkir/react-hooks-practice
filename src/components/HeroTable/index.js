@@ -11,13 +11,13 @@ const heroes = [
 
 export default () => {
   const heroesRows = heroes.map((e, index) => (
-    <tr class='character-row' key={index}>
+    <tr className='character-row' key={index}>
       <td>{e.name}</td>
       <td>{e.race}</td>
       <td>{e.age}</td>
       <td>{e.weapon}</td>
       <td>
-        <div class='controls'>
+        <div className='controls'>
           <div>☠ Kill</div>
           <div>💍 Use Ring</div>
         </div>
@@ -26,15 +26,17 @@ export default () => {
   ))
 
   return (
-    <table class='characters-table'>
-      <tr class='character-row'>
-        <th>Name</th>
-        <th>Race</th>
-        <th>Age</th>
-        <th>Weapon</th>
-        <th />
-      </tr>
-      {heroesRows}
+    <table className='characters-table'>
+      <tbody>
+        <tr className='character-row'>
+          <th>Name</th>
+          <th>Race</th>
+          <th>Age</th>
+          <th>Weapon</th>
+          <th />
+        </tr>
+        {heroesRows}
+      </tbody>
     </table>
   )
 }
